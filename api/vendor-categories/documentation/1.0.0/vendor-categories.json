@@ -570,9 +570,6 @@
                     "type": "string"
                   }
                 },
-                "published_at": {
-                  "type": "datetime"
-                },
                 "created_by": {
                   "type": "string"
                 },
@@ -586,7 +583,8 @@
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "name"
               ],
               "properties": {
                 "id": {
@@ -622,11 +620,17 @@
                 "recommendedLevel": {
                   "type": "string"
                 },
-                "vendor_type": {
-                  "type": "string"
+                "vendor_types": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
-                "vendor_category": {
-                  "type": "string"
+                "vendor_categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "published_at": {
                   "type": "datetime"
@@ -639,9 +643,6 @@
                 }
               }
             }
-          },
-          "published_at": {
-            "type": "datetime"
           }
         }
       },
@@ -668,9 +669,6 @@
             "items": {
               "type": "string"
             }
-          },
-          "published_at": {
-            "type": "datetime"
           },
           "created_by": {
             "type": "string"

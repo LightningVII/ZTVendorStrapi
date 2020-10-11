@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/11/2020 6:43:02 PM"
+    "x-generation-date": "10/11/2020 8:49:32 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4057,7 +4057,8 @@
       },
       "Company": {
         "required": [
-          "id"
+          "id",
+          "name"
         ],
         "properties": {
           "id": {
@@ -4093,78 +4094,78 @@
           "recommendedLevel": {
             "type": "string"
           },
-          "vendor_type": {
-            "required": [
-              "id",
-              "name",
-              "value"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "value": {
-                "type": "string"
-              },
-              "vendor_categories": {
-                "type": "string"
-              },
-              "companies": {
-                "type": "array",
-                "items": {
+          "vendor_types": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "value"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                },
+                "vendor_categories": {
+                  "type": "string"
+                },
+                "companies": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
                   "type": "string"
                 }
-              },
-              "published_at": {
-                "type": "datetime"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           },
-          "vendor_category": {
-            "required": [
-              "id",
-              "name",
-              "value"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "value": {
-                "type": "string"
-              },
-              "vendor_types": {
-                "type": "array",
-                "items": {
+          "vendor_categories": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "value"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                },
+                "vendor_types": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "companies": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
                   "type": "string"
                 }
-              },
-              "companies": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "datetime"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           },
@@ -4174,6 +4175,9 @@
         }
       },
       "NewCompany": {
+        "required": [
+          "name"
+        ],
         "properties": {
           "name": {
             "type": "string"
@@ -4205,11 +4209,17 @@
           "recommendedLevel": {
             "type": "string"
           },
-          "vendor_type": {
-            "type": "string"
+          "vendor_types": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "vendor_category": {
-            "type": "string"
+          "vendor_categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "datetime"
@@ -4265,9 +4275,6 @@
                     "type": "string"
                   }
                 },
-                "published_at": {
-                  "type": "datetime"
-                },
                 "created_by": {
                   "type": "string"
                 },
@@ -4281,7 +4288,8 @@
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "name"
               ],
               "properties": {
                 "id": {
@@ -4317,11 +4325,17 @@
                 "recommendedLevel": {
                   "type": "string"
                 },
-                "vendor_type": {
-                  "type": "string"
+                "vendor_types": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
-                "vendor_category": {
-                  "type": "string"
+                "vendor_categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "published_at": {
                   "type": "datetime"
@@ -4334,9 +4348,6 @@
                 }
               }
             }
-          },
-          "published_at": {
-            "type": "datetime"
           }
         }
       },
@@ -4363,9 +4374,6 @@
             "items": {
               "type": "string"
             }
-          },
-          "published_at": {
-            "type": "datetime"
           },
           "created_by": {
             "type": "string"
@@ -4419,9 +4427,6 @@
                   "type": "string"
                 }
               },
-              "published_at": {
-                "type": "datetime"
-              },
               "created_by": {
                 "type": "string"
               },
@@ -4434,7 +4439,8 @@
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "name"
               ],
               "properties": {
                 "id": {
@@ -4470,11 +4476,17 @@
                 "recommendedLevel": {
                   "type": "string"
                 },
-                "vendor_type": {
-                  "type": "string"
+                "vendor_types": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
-                "vendor_category": {
-                  "type": "string"
+                "vendor_categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "published_at": {
                   "type": "datetime"
@@ -4487,9 +4499,6 @@
                 }
               }
             }
-          },
-          "published_at": {
-            "type": "datetime"
           }
         }
       },
@@ -4513,9 +4522,6 @@
             "items": {
               "type": "string"
             }
-          },
-          "published_at": {
-            "type": "datetime"
           },
           "created_by": {
             "type": "string"

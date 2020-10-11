@@ -8,7 +8,7 @@
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "name": {
@@ -22,12 +22,12 @@
       "unique": true
     },
     "vendor_categories": {
-      "via": "vendor_types",
-      "model": "vendor-categories"
+      "model": "vendor-categories",
+      "via": "vendor_types"
     },
     "companies": {
-      "via": "vendor_type",
-      "collection": "company"
+      "collection": "company",
+      "via": "vendor_types"
     }
   }
 }

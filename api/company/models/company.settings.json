@@ -12,7 +12,9 @@
   },
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "address": {
       "type": "string"
@@ -41,13 +43,15 @@
     "recommendedLevel": {
       "type": "string"
     },
-    "vendor_type": {
-      "model": "vendor-types",
-      "via": "companies"
+    "vendor_types": {
+      "via": "companies",
+      "collection": "vendor-types",
+      "dominant": true
     },
-    "vendor_category": {
-      "model": "vendor-categories",
-      "via": "companies"
+    "vendor_categories": {
+      "via": "companies",
+      "collection": "vendor-categories",
+      "dominant": true
     }
   }
 }
