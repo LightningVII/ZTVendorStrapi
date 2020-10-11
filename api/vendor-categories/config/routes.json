@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/vendor-categories",
+      "handler": "vendor-categories.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/vendor-categories/count",
+      "handler": "vendor-categories.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/vendor-categories/:id",
+      "handler": "vendor-categories.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/vendor-categories",
+      "handler": "vendor-categories.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/vendor-categories/:id",
+      "handler": "vendor-categories.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/vendor-categories/:id",
+      "handler": "vendor-categories.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

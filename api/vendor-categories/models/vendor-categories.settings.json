@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vendor_categories",
+  "info": {
+    "name": "VendorCategories",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "key": {
+      "type": "uid"
+    }
+  }
+}
