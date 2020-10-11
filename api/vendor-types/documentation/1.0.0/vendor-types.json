@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/vendor-categories": {
+    "/vendor-types": {
       "get": {
         "deprecated": false,
-        "description": "Find all the vendor-categories's records",
+        "description": "Find all the vendor-types's records",
         "responses": {
           "200": {
-            "description": "Retrieve vendor-categories document(s)",
+            "description": "Retrieve vendor-types document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Vendor-categories"
+          "Vendor-types"
         ],
         "parameters": [
           {
@@ -195,10 +195,10 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new vendor-categories record",
+        "description": "Create a new vendor-types record",
         "responses": {
           "200": {
-            "description": "Retrieve vendor-categories document(s)",
+            "description": "Retrieve vendor-types document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Vendor-categories"
+          "Vendor-types"
         ],
         "requestBody": {
           "description": "",
@@ -252,20 +252,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewVendor-categories"
+                "$ref": "#/components/schemas/NewVendor-types"
               }
             }
           }
         }
       }
     },
-    "/vendor-categories/count": {
+    "/vendor-types/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of vendor-categories documents",
+        "description": "Retrieve the numver of vendor-types documents",
         "responses": {
           "200": {
-            "description": "Retrieve vendor-categories document(s)",
+            "description": "Retrieve vendor-types document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -311,18 +311,18 @@
         },
         "summary": "",
         "tags": [
-          "Vendor-categories"
+          "Vendor-types"
         ],
         "parameters": []
       }
     },
-    "/vendor-categories/{id}": {
+    "/vendor-types/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one vendor-categories record",
+        "description": "Find one vendor-types record",
         "responses": {
           "200": {
-            "description": "Retrieve vendor-categories document(s)",
+            "description": "Retrieve vendor-types document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Vendor-categories"
+          "Vendor-types"
         ],
         "parameters": [
           {
@@ -385,10 +385,10 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single vendor-categories record",
+        "description": "Update a single vendor-types record",
         "responses": {
           "200": {
-            "description": "Retrieve vendor-categories document(s)",
+            "description": "Retrieve vendor-types document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Vendor-categories"
+          "Vendor-types"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewVendor-categories"
+                "$ref": "#/components/schemas/NewVendor-types"
               }
             }
           }
@@ -462,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single vendor-categories record",
+        "description": "Delete a single vendor-types record",
         "responses": {
           "200": {
-            "description": "deletes a single vendor-categories based on the ID supplied",
+            "description": "deletes a single vendor-types based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Vendor-categories"
+          "Vendor-types"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Vendor-categories": {
+      "Vendor-types": {
         "required": [
           "id",
           "name",
@@ -543,42 +543,42 @@
           "value": {
             "type": "string"
           },
-          "vendor_types": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "value"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "value": {
-                  "type": "string"
-                },
-                "vendor_categories": {
-                  "type": "string"
-                },
-                "companies": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "datetime"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
+          "vendor_categories": {
+            "required": [
+              "id",
+              "name",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              },
+              "vendor_types": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
+              },
+              "companies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "datetime"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -645,7 +645,7 @@
           }
         }
       },
-      "NewVendor-categories": {
+      "NewVendor-types": {
         "required": [
           "name",
           "value"
@@ -657,11 +657,8 @@
           "value": {
             "type": "string"
           },
-          "vendor_types": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "vendor_categories": {
+            "type": "string"
           },
           "companies": {
             "type": "array",

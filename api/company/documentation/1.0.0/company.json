@@ -1,19 +1,18 @@
 {
   "paths": {
-    "/vendor-categories": {
+    "/companies": {
       "get": {
         "deprecated": false,
-        "description": "Find all the vendor-categories's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve vendor-categories document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Company"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Vendor-categories"
+          "Company"
         ],
         "parameters": [
           {
@@ -195,18 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new vendor-categories record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve vendor-categories document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Company"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Vendor-categories"
+          "Company"
         ],
         "requestBody": {
           "description": "",
@@ -252,26 +247,26 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewVendor-categories"
+                "$ref": "#/components/schemas/NewCompany"
               }
             }
           }
         }
       }
     },
-    "/vendor-categories/count": {
+    "/companies/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of vendor-categories documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve vendor-categories document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,26 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Vendor-categories"
+          "Company"
         ],
         "parameters": []
       }
     },
-    "/vendor-categories/{id}": {
+    "/companies/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one vendor-categories record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve vendor-categories document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Company"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Vendor-categories"
+          "Company"
         ],
         "parameters": [
           {
@@ -385,18 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single vendor-categories record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve vendor-categories document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Company"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Vendor-categories"
+          "Company"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewVendor-categories"
+                "$ref": "#/components/schemas/NewCompany"
               }
             }
           }
@@ -462,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single vendor-categories record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single vendor-categories based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Vendor-categories"
+          "Company"
         ],
         "parameters": [
           {
@@ -527,11 +514,9 @@
   },
   "components": {
     "schemas": {
-      "Vendor-categories": {
+      "Company": {
         "required": [
-          "id",
-          "name",
-          "value"
+          "id"
         ],
         "properties": {
           "id": {
@@ -540,103 +525,105 @@
           "name": {
             "type": "string"
           },
-          "value": {
+          "address": {
             "type": "string"
           },
-          "vendor_types": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "value"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "value": {
-                  "type": "string"
-                },
-                "vendor_categories": {
-                  "type": "string"
-                },
-                "companies": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "datetime"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
+          "legal": {
+            "type": "string"
+          },
+          "capital": {
+            "type": "string"
+          },
+          "registration": {
+            "type": "string"
+          },
+          "performance": {
+            "type": "string"
+          },
+          "nature": {
+            "type": "string"
+          },
+          "evaluation": {
+            "type": "string"
+          },
+          "remarks": {
+            "type": "string"
+          },
+          "recommendedLevel": {
+            "type": "string"
+          },
+          "vendor_type": {
+            "required": [
+              "id",
+              "name",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              },
+              "vendor_categories": {
+                "type": "string"
+              },
+              "companies": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
+              },
+              "published_at": {
+                "type": "datetime"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
-          "companies": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "address": {
-                  "type": "string"
-                },
-                "legal": {
-                  "type": "string"
-                },
-                "capital": {
-                  "type": "string"
-                },
-                "registration": {
-                  "type": "string"
-                },
-                "performance": {
-                  "type": "string"
-                },
-                "nature": {
-                  "type": "string"
-                },
-                "evaluation": {
-                  "type": "string"
-                },
-                "remarks": {
-                  "type": "string"
-                },
-                "recommendedLevel": {
-                  "type": "string"
-                },
-                "vendor_type": {
-                  "type": "string"
-                },
-                "vendor_category": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "datetime"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
+          "vendor_category": {
+            "required": [
+              "id",
+              "name",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              },
+              "vendor_types": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
+              },
+              "companies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "datetime"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -645,29 +632,43 @@
           }
         }
       },
-      "NewVendor-categories": {
-        "required": [
-          "name",
-          "value"
-        ],
+      "NewCompany": {
         "properties": {
           "name": {
             "type": "string"
           },
-          "value": {
+          "address": {
             "type": "string"
           },
-          "vendor_types": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "legal": {
+            "type": "string"
           },
-          "companies": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "capital": {
+            "type": "string"
+          },
+          "registration": {
+            "type": "string"
+          },
+          "performance": {
+            "type": "string"
+          },
+          "nature": {
+            "type": "string"
+          },
+          "evaluation": {
+            "type": "string"
+          },
+          "remarks": {
+            "type": "string"
+          },
+          "recommendedLevel": {
+            "type": "string"
+          },
+          "vendor_type": {
+            "type": "string"
+          },
+          "vendor_category": {
+            "type": "string"
           },
           "published_at": {
             "type": "datetime"
@@ -682,5 +683,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Company"
+    }
+  ]
 }

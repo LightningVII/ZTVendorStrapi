@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "companies",
+  "info": {
+    "name": "Company",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "legal": {
+      "type": "string"
+    },
+    "capital": {
+      "type": "string"
+    },
+    "registration": {
+      "type": "string"
+    },
+    "performance": {
+      "type": "string"
+    },
+    "nature": {
+      "type": "string"
+    },
+    "evaluation": {
+      "type": "string"
+    },
+    "remarks": {
+      "type": "string"
+    },
+    "recommendedLevel": {
+      "type": "string"
+    },
+    "vendor_type": {
+      "model": "vendor-types",
+      "via": "companies"
+    },
+    "vendor_category": {
+      "model": "vendor-categories",
+      "via": "companies"
+    }
+  }
+}

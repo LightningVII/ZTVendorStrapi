@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "vendor_categories",
+  "collectionName": "vendor_types",
   "info": {
-    "name": "VendorCategory",
+    "name": "VendorType",
     "description": ""
   },
   "options": {
@@ -21,12 +21,12 @@
       "required": true,
       "unique": true
     },
-    "vendor_types": {
-      "collection": "vendor-types",
-      "via": "vendor_categories"
+    "vendor_categories": {
+      "via": "vendor_types",
+      "model": "vendor-categories"
     },
     "companies": {
-      "via": "vendor_category",
+      "via": "vendor_type",
       "collection": "company"
     }
   }

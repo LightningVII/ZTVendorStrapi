@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/vendor-types",
+      "handler": "vendor-types.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/vendor-types/count",
+      "handler": "vendor-types.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/vendor-types/:id",
+      "handler": "vendor-types.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/vendor-types",
+      "handler": "vendor-types.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/vendor-types/:id",
+      "handler": "vendor-types.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/vendor-types/:id",
+      "handler": "vendor-types.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
