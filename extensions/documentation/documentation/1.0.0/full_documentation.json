@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/12/2020 12:20:06 AM"
+    "x-generation-date": "10/20/2020 6:47:13 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4094,13 +4094,17 @@
           "recommendedLevel": {
             "type": "string"
           },
-          "vendor_types": {
+          "basicInformationFile": {
             "type": "array",
             "items": {
               "required": [
                 "id",
                 "name",
-                "value"
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
               ],
               "properties": {
                 "id": {
@@ -4109,17 +4113,47 @@
                 "name": {
                   "type": "string"
                 },
-                "value": {
+                "alternativeText": {
                   "type": "string"
                 },
-                "vendor_categories": {
+                "caption": {
                   "type": "string"
                 },
-                "companies": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                },
+                "formats": {
+                  "type": "object"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "previewUrl": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
@@ -4130,13 +4164,17 @@
               }
             }
           },
-          "vendor_categories": {
+          "evaluationInformationFile": {
             "type": "array",
             "items": {
               "required": [
                 "id",
                 "name",
-                "value"
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
               ],
               "properties": {
                 "id": {
@@ -4145,20 +4183,47 @@
                 "name": {
                   "type": "string"
                 },
-                "value": {
+                "alternativeText": {
                   "type": "string"
                 },
-                "vendor_types": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "caption": {
+                  "type": "string"
                 },
-                "companies": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                },
+                "formats": {
+                  "type": "object"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "previewUrl": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
@@ -4216,6 +4281,18 @@
             }
           },
           "vendor_categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "follow": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "followed": {
             "type": "array",
             "items": {
               "type": "string"
@@ -4332,6 +4409,30 @@
                   }
                 },
                 "vendor_categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "basicInformationFile": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "evaluationInformationFile": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "follow": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "followed": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -4483,6 +4584,30 @@
                   }
                 },
                 "vendor_categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "basicInformationFile": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "evaluationInformationFile": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "follow": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "followed": {
                   "type": "array",
                   "items": {
                     "type": "string"

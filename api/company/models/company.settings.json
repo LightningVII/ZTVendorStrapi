@@ -44,14 +44,49 @@
       "type": "string"
     },
     "vendor_types": {
-      "via": "companies",
+      "private": true,
       "collection": "vendor-types",
+      "via": "companies",
       "dominant": true
     },
     "vendor_categories": {
-      "via": "companies",
+      "private": true,
       "collection": "vendor-categories",
+      "via": "companies",
       "dominant": true
+    },
+    "basicInformationFile": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "evaluationInformationFile": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "follow": {
+      "private": true,
+      "collection": "company",
+      "via": "followed",
+      "dominant": true
+    },
+    "followed": {
+      "private": true,
+      "collection": "company",
+      "via": "follow"
     }
   }
 }

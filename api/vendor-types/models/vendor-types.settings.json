@@ -26,8 +26,8 @@
       "via": "vendor_types"
     },
     "companies": {
-      "collection": "company",
-      "via": "vendor_types"
+      "via": "vendor_types",
+      "collection": "company"
     }
   }
 }

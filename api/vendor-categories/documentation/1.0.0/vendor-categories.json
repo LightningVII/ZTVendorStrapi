@@ -632,6 +632,30 @@
                     "type": "string"
                   }
                 },
+                "basicInformationFile": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "evaluationInformationFile": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "follow": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "followed": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "datetime"
                 },
