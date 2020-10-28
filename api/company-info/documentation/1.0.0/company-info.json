@@ -330,7 +330,8 @@
             "type": "string"
           },
           "published_at": {
-            "type": "datetime"
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
@@ -343,7 +344,8 @@
             "type": "string"
           },
           "published_at": {
-            "type": "datetime"
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"

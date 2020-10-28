@@ -29,7 +29,7 @@
       "type": "string"
     },
     "performance": {
-      "type": "string"
+      "type": "text"
     },
     "nature": {
       "type": "string"
@@ -38,10 +38,7 @@
       "type": "string"
     },
     "remarks": {
-      "type": "string"
-    },
-    "recommendedLevel": {
-      "type": "string"
+      "type": "text"
     },
     "vendor_types": {
       "private": true,
@@ -87,6 +84,16 @@
       "private": true,
       "collection": "company",
       "via": "follow"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ]
     }
   }
 }

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/20/2020 6:47:13 PM"
+    "x-generation-date": "10/28/2020 3:28:39 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4032,7 +4032,8 @@
             "type": "string"
           },
           "published_at": {
-            "type": "datetime"
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
@@ -4045,7 +4046,8 @@
             "type": "string"
           },
           "published_at": {
-            "type": "datetime"
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -4089,9 +4091,6 @@
             "type": "string"
           },
           "remarks": {
-            "type": "string"
-          },
-          "recommendedLevel": {
             "type": "string"
           },
           "basicInformationFile": {
@@ -4234,8 +4233,19 @@
               }
             }
           },
+          "level": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ]
+          },
           "published_at": {
-            "type": "datetime"
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
@@ -4271,9 +4281,6 @@
           "remarks": {
             "type": "string"
           },
-          "recommendedLevel": {
-            "type": "string"
-          },
           "vendor_types": {
             "type": "array",
             "items": {
@@ -4298,8 +4305,19 @@
               "type": "string"
             }
           },
+          "level": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ]
+          },
           "published_at": {
-            "type": "datetime"
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -4399,9 +4417,6 @@
                 "remarks": {
                   "type": "string"
                 },
-                "recommendedLevel": {
-                  "type": "string"
-                },
                 "vendor_types": {
                   "type": "array",
                   "items": {
@@ -4438,8 +4453,11 @@
                     "type": "string"
                   }
                 },
+                "level": {
+                  "type": "string"
+                },
                 "published_at": {
-                  "type": "datetime"
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
@@ -4574,9 +4592,6 @@
                 "remarks": {
                   "type": "string"
                 },
-                "recommendedLevel": {
-                  "type": "string"
-                },
                 "vendor_types": {
                   "type": "array",
                   "items": {
@@ -4613,8 +4628,11 @@
                     "type": "string"
                   }
                 },
+                "level": {
+                  "type": "string"
+                },
                 "published_at": {
-                  "type": "datetime"
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
@@ -4741,6 +4759,9 @@
                   "type": "string"
                 },
                 "resetPasswordToken": {
+                  "type": "string"
+                },
+                "confirmationToken": {
                   "type": "string"
                 },
                 "confirmed": {
@@ -4886,9 +4907,13 @@
           },
           "password": {
             "type": "string",
+            "format": "password",
             "minLength": 6
           },
           "resetPasswordToken": {
+            "type": "string"
+          },
+          "confirmationToken": {
             "type": "string"
           },
           "confirmed": {

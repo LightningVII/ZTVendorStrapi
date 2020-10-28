@@ -550,9 +550,6 @@
           "remarks": {
             "type": "string"
           },
-          "recommendedLevel": {
-            "type": "string"
-          },
           "basicInformationFile": {
             "type": "array",
             "items": {
@@ -693,8 +690,19 @@
               }
             }
           },
+          "level": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ]
+          },
           "published_at": {
-            "type": "datetime"
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
@@ -730,9 +738,6 @@
           "remarks": {
             "type": "string"
           },
-          "recommendedLevel": {
-            "type": "string"
-          },
           "vendor_types": {
             "type": "array",
             "items": {
@@ -757,8 +762,19 @@
               "type": "string"
             }
           },
+          "level": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ]
+          },
           "published_at": {
-            "type": "datetime"
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"

@@ -617,9 +617,6 @@
                 "remarks": {
                   "type": "string"
                 },
-                "recommendedLevel": {
-                  "type": "string"
-                },
                 "vendor_types": {
                   "type": "array",
                   "items": {
@@ -656,8 +653,11 @@
                     "type": "string"
                   }
                 },
+                "level": {
+                  "type": "string"
+                },
                 "published_at": {
-                  "type": "datetime"
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
