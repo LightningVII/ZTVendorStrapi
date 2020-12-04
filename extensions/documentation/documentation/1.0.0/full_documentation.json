@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/02/2020 3:50:16 PM"
+    "x-generation-date": "12/03/2020 3:46:09 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4093,6 +4093,45 @@
           "remarks": {
             "type": "string"
           },
+          "vendor_types": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "value"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                },
+                "vendor_categories": {
+                  "type": "string"
+                },
+                "companies": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "BieMing_Alias": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "basicInformationFile": {
             "type": "array",
             "items": {
@@ -4370,6 +4409,9 @@
                     "type": "string"
                   }
                 },
+                "BieMing_Alias": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -4642,6 +4684,9 @@
                 }
               }
             }
+          },
+          "BieMing_Alias": {
+            "type": "string"
           }
         }
       },
@@ -4665,6 +4710,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "BieMing_Alias": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

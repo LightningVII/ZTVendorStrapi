@@ -26,8 +26,11 @@
       "via": "vendor_types"
     },
     "companies": {
-      "via": "vendor_types",
-      "collection": "company"
+      "collection": "company",
+      "via": "vendor_types"
+    },
+    "BieMing_Alias": {
+      "type": "string"
     }
   }
 }

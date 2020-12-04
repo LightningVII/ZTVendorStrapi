@@ -41,9 +41,8 @@
       "type": "text"
     },
     "vendor_types": {
-      "private": true,
-      "collection": "vendor-types",
       "via": "companies",
+      "collection": "vendor-types",
       "dominant": true
     },
     "vendor_categories": {
