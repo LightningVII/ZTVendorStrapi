@@ -153,7 +153,7 @@
   "app.utils.defaultMessage": " ",
   "app.utils.delete": "删除",
   "app.utils.placeholder.defaultMessage": " ",
-  "app.utils.unpublish": "未上传",
+  "app.utils.unpublish": "不上传",
   "component.Input.error.validation.integer": "该值必须是整数",
   "components.AutoReloadBlocker.description": "使用以下命令中的一个来运行 Strapi：",
   "components.AutoReloadBlocker.header": "这个插件需要重新加载特性。",
