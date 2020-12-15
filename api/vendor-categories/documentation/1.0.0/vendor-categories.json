@@ -570,9 +570,6 @@
                     "type": "string"
                   }
                 },
-                "BieMing_Alias": {
-                  "type": "string"
-                },
                 "created_by": {
                   "type": "string"
                 },
