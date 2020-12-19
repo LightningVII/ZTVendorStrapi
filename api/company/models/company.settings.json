@@ -16,33 +16,18 @@
       "required": true,
       "unique": true
     },
-    "address": {
-      "type": "string"
-    },
-    "legal": {
-      "type": "string"
-    },
     "capital": {
       "type": "string"
     },
-    "registration": {
-      "type": "string"
-    },
-    "performance": {
-      "type": "text"
-    },
     "nature": {
-      "type": "string"
-    },
-    "evaluation": {
       "type": "string"
     },
     "remarks": {
       "type": "text"
     },
     "vendor_types": {
-      "via": "companies",
       "collection": "vendor-types",
+      "via": "companies",
       "dominant": true
     },
     "vendor_categories": {
@@ -93,6 +78,45 @@
         "D",
         "E"
       ]
+    },
+    "mailbox": {
+      "type": "string"
+    },
+    "telephone": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "contact": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "cooperation_model": {
+      "type": "string"
+    },
+    "is_inspected": {
+      "type": "boolean"
+    },
+    "payment": {
+      "type": "string"
+    },
+    "main_products": {
+      "type": "text"
+    },
+    "productivity": {
+      "type": "string"
+    },
+    "can_in_storage": {
+      "type": "string"
+    },
+    "features": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
     }
   }
 }

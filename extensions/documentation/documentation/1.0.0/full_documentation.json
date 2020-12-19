@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/18/2020 5:01:41 PM"
+    "x-generation-date": "12/19/2020 12:29:22 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3717,25 +3717,10 @@
           "name": {
             "type": "string"
           },
-          "address": {
-            "type": "string"
-          },
-          "legal": {
-            "type": "string"
-          },
           "capital": {
             "type": "string"
           },
-          "registration": {
-            "type": "string"
-          },
-          "performance": {
-            "type": "string"
-          },
           "nature": {
-            "type": "string"
-          },
-          "evaluation": {
             "type": "string"
           },
           "remarks": {
@@ -3927,6 +3912,45 @@
               "E"
             ]
           },
+          "mailbox": {
+            "type": "string"
+          },
+          "telephone": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "contact": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "cooperation_model": {
+            "type": "string"
+          },
+          "is_inspected": {
+            "type": "boolean"
+          },
+          "payment": {
+            "type": "string"
+          },
+          "main_products": {
+            "type": "string"
+          },
+          "productivity": {
+            "type": "string"
+          },
+          "can_in_storage": {
+            "type": "string"
+          },
+          "features": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -3941,25 +3965,10 @@
           "name": {
             "type": "string"
           },
-          "address": {
-            "type": "string"
-          },
-          "legal": {
-            "type": "string"
-          },
           "capital": {
             "type": "string"
           },
-          "registration": {
-            "type": "string"
-          },
-          "performance": {
-            "type": "string"
-          },
           "nature": {
-            "type": "string"
-          },
-          "evaluation": {
             "type": "string"
           },
           "remarks": {
@@ -3998,6 +4007,45 @@
               "D",
               "E"
             ]
+          },
+          "mailbox": {
+            "type": "string"
+          },
+          "telephone": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "contact": {
+            "type": "string"
+          },
+          "brand": {
+            "type": "string"
+          },
+          "cooperation_model": {
+            "type": "string"
+          },
+          "is_inspected": {
+            "type": "boolean"
+          },
+          "payment": {
+            "type": "string"
+          },
+          "main_products": {
+            "type": "string"
+          },
+          "productivity": {
+            "type": "string"
+          },
+          "can_in_storage": {
+            "type": "string"
+          },
+          "features": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -4077,25 +4125,10 @@
                 "name": {
                   "type": "string"
                 },
-                "address": {
-                  "type": "string"
-                },
-                "legal": {
-                  "type": "string"
-                },
                 "capital": {
                   "type": "string"
                 },
-                "registration": {
-                  "type": "string"
-                },
-                "performance": {
-                  "type": "string"
-                },
                 "nature": {
-                  "type": "string"
-                },
-                "evaluation": {
                   "type": "string"
                 },
                 "remarks": {
@@ -4138,6 +4171,45 @@
                   }
                 },
                 "level": {
+                  "type": "string"
+                },
+                "mailbox": {
+                  "type": "string"
+                },
+                "telephone": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "contact": {
+                  "type": "string"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "cooperation_model": {
+                  "type": "string"
+                },
+                "is_inspected": {
+                  "type": "boolean"
+                },
+                "payment": {
+                  "type": "string"
+                },
+                "main_products": {
+                  "type": "string"
+                },
+                "productivity": {
+                  "type": "string"
+                },
+                "can_in_storage": {
+                  "type": "string"
+                },
+                "features": {
+                  "type": "string"
+                },
+                "address": {
                   "type": "string"
                 },
                 "published_at": {
@@ -4252,25 +4324,10 @@
                 "name": {
                   "type": "string"
                 },
-                "address": {
-                  "type": "string"
-                },
-                "legal": {
-                  "type": "string"
-                },
                 "capital": {
                   "type": "string"
                 },
-                "registration": {
-                  "type": "string"
-                },
-                "performance": {
-                  "type": "string"
-                },
                 "nature": {
-                  "type": "string"
-                },
-                "evaluation": {
                   "type": "string"
                 },
                 "remarks": {
@@ -4313,6 +4370,45 @@
                   }
                 },
                 "level": {
+                  "type": "string"
+                },
+                "mailbox": {
+                  "type": "string"
+                },
+                "telephone": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "contact": {
+                  "type": "string"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "cooperation_model": {
+                  "type": "string"
+                },
+                "is_inspected": {
+                  "type": "boolean"
+                },
+                "payment": {
+                  "type": "string"
+                },
+                "main_products": {
+                  "type": "string"
+                },
+                "productivity": {
+                  "type": "string"
+                },
+                "can_in_storage": {
+                  "type": "string"
+                },
+                "features": {
+                  "type": "string"
+                },
+                "address": {
                   "type": "string"
                 },
                 "published_at": {
