@@ -109,14 +109,14 @@
     "productivity": {
       "type": "string"
     },
-    "can_in_storage": {
-      "type": "string"
-    },
     "features": {
       "type": "string"
     },
     "address": {
       "type": "string"
+    },
+    "can_in_storage": {
+      "type": "boolean"
     }
   }
 }

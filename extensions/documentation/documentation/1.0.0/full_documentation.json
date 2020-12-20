@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/19/2020 12:29:22 AM"
+    "x-generation-date": "12/20/2020 5:37:31 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3942,14 +3942,14 @@
           "productivity": {
             "type": "string"
           },
-          "can_in_storage": {
-            "type": "string"
-          },
           "features": {
             "type": "string"
           },
           "address": {
             "type": "string"
+          },
+          "can_in_storage": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",
@@ -4038,14 +4038,14 @@
           "productivity": {
             "type": "string"
           },
-          "can_in_storage": {
-            "type": "string"
-          },
           "features": {
             "type": "string"
           },
           "address": {
             "type": "string"
+          },
+          "can_in_storage": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",
@@ -4203,14 +4203,14 @@
                 "productivity": {
                   "type": "string"
                 },
-                "can_in_storage": {
-                  "type": "string"
-                },
                 "features": {
                   "type": "string"
                 },
                 "address": {
                   "type": "string"
+                },
+                "can_in_storage": {
+                  "type": "boolean"
                 },
                 "published_at": {
                   "type": "string"
@@ -4402,14 +4402,14 @@
                 "productivity": {
                   "type": "string"
                 },
-                "can_in_storage": {
-                  "type": "string"
-                },
                 "features": {
                   "type": "string"
                 },
                 "address": {
                   "type": "string"
+                },
+                "can_in_storage": {
+                  "type": "boolean"
                 },
                 "published_at": {
                   "type": "string"
