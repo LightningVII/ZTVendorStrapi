@@ -15,16 +15,16 @@ const V_T_NULL = "vendor_types_null";
 
 module.exports = {
   async find(ctx) {
+    const categoriesServices = strapi.services["vendor-categories"];
+    const typesServices = strapi.services["vendor-types"];
     const services = strapi.services["company"];
     const model = strapi.models["company"];
-    const { current, pageSize } = ctx.query;
+    const { current, pageSize, keyword } = ctx.query;
 
     const getDataSource = async () => {
       const entities = ctx.query._q
         ? await services.search(ctx.query)
         : await services.find(ctx.query);
-
-      console.log("ctx.query;", JSON.stringify(ctx.query));
 
       return entities.map((entity) => {
         const company = sanitizeEntity(entity, { model });
@@ -35,11 +35,41 @@ module.exports = {
       });
     };
 
-    if (current) {
+    if (keyword) {
+      ctx.query._start = (current - 1) * pageSize;
+      ctx.query._limit = pageSize;
+
+      const categories = await categoriesServices.find({
+        name_contains: keyword,
+      });
+      const types = await typesServices.find({
+        name_contains: keyword,
+      });
+      const _or = [];
+      const categoriesQuery = "vendor_categories.id_in";
+      const typesQuery = "vendor_types.id_in";
+      const categoriesIds = categories.map(({ id }) => id);
+      const typeIds = types.map(({ id }) => id);
+      if (categoriesIds.length) _or.push({ [categoriesQuery]: categoriesIds });
+      if (typeIds.length) _or.push({ [typesQuery]: typeIds });
+      _or.push({ name_contains: keyword });
+      _or.push({ main_products_contains: keyword });
+
+      delete ctx.query.keyword;
+      delete ctx.query.type;
+      delete ctx.query.current;
+      delete ctx.query.pageSize;
+      ctx.query = { _where: { _or } };
+      const total = await services.count(ctx.query);
+      const data = await getDataSource();
+
+      return { data, total, success: true, pageSize, current };
+    } else if (current) {
       const categoriesValue = ctx.query[V_G_VALUE];
       const typesValue = ctx.query[V_T_VALUE];
       ctx.query._start = (current - 1) * pageSize;
       ctx.query._limit = pageSize;
+      delete ctx.query.keyword;
       delete ctx.query.type;
       delete ctx.query.current;
       delete ctx.query.pageSize;
