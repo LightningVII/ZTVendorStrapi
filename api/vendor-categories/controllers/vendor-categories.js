@@ -21,7 +21,7 @@ module.exports = {
       delete vendorCategory.updated_at;
       delete vendorCategory.published_at;
 
-      vendorCategory.vendor_types = vendorCategory?.vendor_types.map((item) => {
+      vendorCategory.vendor_types = vendorCategory.vendor_types.map((item) => {
         delete item.created_at;
         delete item.updated_at;
         delete item.published_at;

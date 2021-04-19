@@ -639,7 +639,14 @@
                   }
                 },
                 "level": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "A",
+                    "B",
+                    "C",
+                    "D",
+                    "E"
+                  ]
                 },
                 "mailbox": {
                   "type": "string"
